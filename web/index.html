@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Asset Monitor · 资产看板</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --card: #fff;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --up: #059669;
+      --down: #dc2626;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Noto Sans SC", -apple-system, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+    header {
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 0 0 4px 0;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+      font-family: "JetBrains Mono", monospace;
+    }
+    section {
+      background: var(--card);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+    section h2 {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin: 0;
+      padding: 12px 16px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    th, td {
+      padding: 10px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    th:last-child, td:last-child { text-align: right; }
+    th:nth-child(4), td:nth-child(4),
+    th:nth-child(5), td:nth-child(5) { text-align: right; }
+    tr:last-child td { border-bottom: none; }
+    .symbol { font-family: "JetBrains Mono", monospace; font-weight: 500; }
+    .price { font-family: "JetBrains Mono", monospace; }
+    .ch-up { color: var(--up); }
+    .ch-down { color: var(--down); }
+    .ch-none { color: var(--muted); }
+    .loading, .error {
+      text-align: center;
+      padding: 48px 16px;
+      color: var(--muted);
+    }
+    .error { color: var(--down); }
+    .refresh {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 6px 12px;
+      font-size: 12px;
+      color: var(--muted);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .refresh:hover { color: var(--text); border-color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Asset Monitor</h1>
+      <p class="meta" id="meta">加载中…</p>
+      <button type="button" class="refresh" id="refresh">刷新数据</button>
+    </header>
+    <div id="app">
+      <p class="loading">正在加载…</p>
+    </div>
+  </div>
+  <script>
+    const app = document.getElementById('app');
+    const meta = document.getElementById('meta');
+    const refreshBtn = document.getElementById('refresh');
+
+    function formatPrice(unit, price) {
+      if (unit === '%') return price.toFixed(2) + '%';
+      const n = Number(price);
+      if (isNaN(n)) return '-';
+      return unit + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+
+    function formatChange(v) {
+      if (v == null) return '-';
+      const n = Number(v);
+      if (isNaN(n)) return '-';
+      const s = (n >= 0 ? '+' : '') + n.toFixed(2) + '%';
+      return s;
+    }
+
+    function render(data) {
+      if (!data || !data.by_category) {
+        app.innerHTML = '<p class="error">暂无数据，请先运行 collect_unified.py 采集。</p>';
+        meta.textContent = '无快照';
+        return;
+      }
+      const at = data.collected_at
+        ? new Date(data.collected_at).toLocaleString('zh-CN', { dateStyle: 'short', timeStyle: 'medium' })
+        : '-';
+      meta.textContent = `更新于 ${at} · 共 ${data.count || 0} 条`;
+
+      let html = '';
+      for (const [category, records] of Object.entries(data.by_category)) {
+        if (!records.length) continue;
+        html += `<section><h2>${category}</h2><table><thead><tr><th>名称</th><th>代码</th><th>价格</th><th>24h</th><th>7日</th></tr></thead><tbody>`;
+        for (const r of records) {
+          const ch24 = r.change_24h;
+          const ch7 = r.change_7d;
+          const c24 = ch24 == null ? 'ch-none' : (ch24 >= 0 ? 'ch-up' : 'ch-down');
+          const c7 = ch7 == null ? 'ch-none' : (ch7 >= 0 ? 'ch-up' : 'ch-down');
+          html += `<tr>
+            <td>${escapeHtml(r.name)}</td>
+            <td class="symbol">${escapeHtml(r.symbol)}</td>
+            <td class="price">${formatPrice(r.unit || '', r.price)}</td>
+            <td class="${c24}">${formatChange(ch24)}</td>
+            <td class="${c7}">${formatChange(ch7)}</td>
+          </tr>`;
+        }
+        html += '</tbody></table></section>';
+      }
+      app.innerHTML = html || '<p class="muted">无记录</p>';
+    }
+
+    function escapeHtml(s) {
+      if (s == null) return '';
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    async function load() {
+      try {
+        const res = await fetch('/api/latest');
+        const data = await res.json();
+        render(data);
+      } catch (e) {
+        app.innerHTML = '<p class="error">请求失败：' + escapeHtml(e.message) + '</p>';
+        meta.textContent = '加载失败';
+      }
+    }
+
+    refreshBtn.addEventListener('click', () => {
+      app.innerHTML = '<p class="loading">正在加载…</p>';
+      load();
+    });
+
+    load();
+  </script>
+</body>
+</html>

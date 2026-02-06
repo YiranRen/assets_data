@@ -1,0 +1,15 @@
+# Asset Monitor 主配置
+
+storage:
+  enabled: true
+  backend: both
+  sqlite:
+    path: data/asset_monitor.db
+  json:
+    dir: data
+    latest_file: latest.json
+    archive_by_date: true
+
+collect:
+  timeout: 15
+  retry: 2

@@ -1,0 +1,30 @@
+# Asset Monitor 配置示例
+# 复制为 config.yaml 并按需修改
+
+# 存储配置
+storage:
+  # 启用存储: true 时采集后写入 SQLite 和/或 JSON
+  enabled: true
+  # 后端: sqlite | json | both
+  backend: both
+  sqlite:
+    path: data/asset_monitor.db
+  json:
+    dir: data
+    # 最新快照文件名
+    latest_file: latest.json
+    # 是否按日期归档 (data/YYYY-MM-DD.json)
+    archive_by_date: true
+
+# 数据源配置（可选，用于 API Key、频率限制等）
+sources:
+  # 腾讯财经 / 网易财经 无需 key
+  # Binance 永续无需 key（公开行情）
+  # DefiLlama 无需 key
+
+# 采集配置
+collect:
+  # 请求超时（秒）
+  timeout: 15
+  # 失败重试次数
+  retry: 2

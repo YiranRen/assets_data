@@ -2,6 +2,8 @@
 
 **全球资产数据监控与展示** — 统一采集、监控并展示全球多类资产价格与指标，支持终端看板与后续告警、Web 看板等扩展。
 
+> 📋 **产品范围**：资产类别与标的以 [PRD.md](PRD.md) 为准（美股七姐妹+VOO、A股合并展示、日股五大商社+日经指数等）。
+
 ---
 
 ## 资产类别及获取方式
@@ -10,9 +12,9 @@
 
 | 资产类别 | 获取方式 | 数据源/接口 | 说明 |
 |----------|----------|-------------|------|
-| 📈 **美股** | HTTP API | Yahoo Finance (yfinance) | 美股个股、ETF、指数；实时/盘后延迟约 15 分钟 |
-| 🇨🇳 **A股** | HTTP API | 腾讯财经（主）、网易财经（备）、AKShare（备） | 沪深 A 股、主要指数；多源自动切换 |
-| 🇯🇵 **日股** | HTTP API | Yahoo Finance (yfinance) | 日股个股、日经 225 等指数 |
+| 📈 **美股** | HTTP API | Yahoo Finance (yfinance) | 美股七姐妹 + VOO；实时/盘后延迟约 15 分钟 |
+| 🇨🇳 **A股** | HTTP API | 腾讯财经（主）、网易财经（备）、AKShare（备） | 沪深 A 股、主要指数（合并展示）；多源自动切换 |
+| 🇯🇵 **日股** | HTTP API | Yahoo Finance (yfinance) | 五大商社 + 日经指数 |
 | 🪙 **加密货币** | 交易所 API | CCXT（Binance、OKX、Coinbase 等 100+ 交易所） | 现货/合约行情，可选 WebSocket |
 | 💰 **贵金属** | 交易所 + ETF | Binance 永续合约（黄金/白银）、yfinance ETF（铂金等） | 以 XAUUSDT、XAGUSDT、PPLT 等为主 |
 | 💱 **外汇** | HTTP API | yfinance（以 CNY 为基准） | 主要货币对兑人民币 |
@@ -95,7 +97,7 @@ python test_all_sources.py
 
 ### 美股 (US Stocks)
 - **数据源**: Yahoo Finance (yfinance)
-- **覆盖**: 美股、ETF、指数
+- **覆盖**: 美股七姐妹（AAPL/MSFT/GOOGL/AMZN/NVDA/META/TSLA）+ VOO + QQQ
 - **延迟**: 实时（收盘后15分钟）
 - **费用**: 免费
 - **支持涨跌幅**: ✅ 24h + 7天
@@ -109,7 +111,7 @@ python test_all_sources.py
 
 ### 日股 (Japan Stocks)
 - **数据源**: Yahoo Finance (yfinance)
-- **覆盖**: 日本五大商社、日经225指数
+- **覆盖**: 五大商社 + 日经指数
 - **延迟**: 实时
 - **费用**: 免费
 - **支持涨跌幅**: ✅ 24h + 7天
