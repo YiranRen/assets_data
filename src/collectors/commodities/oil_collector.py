@@ -1,5 +1,5 @@
 """
-宏观经济：美债收益率（CBOE 指数，yfinance）。
+原油：WTI、布伦特（yfinance 期货）。
 """
 from typing import List
 
@@ -8,13 +8,9 @@ import yfinance as yf
 from ...models import AssetRecord
 from ..base import BaseCollector
 
-# CBOE 收益率指数 + VIX
 SYMBOLS = [
-    ("^VIX", "VIX波动率"),
-    ("^IRX", "13周美国国库券"),
-    ("^FVX", "5年期美债收益率"),
-    ("^TNX", "10年期美债收益率"),
-    ("^TYX", "30年期美债收益率"),
+    ("CL=F", "WTI原油"),
+    ("BZ=F", "布伦特原油"),
 ]
 
 
@@ -27,8 +23,8 @@ def _safe_float(v, default: float = 0.0) -> float:
         return default
 
 
-class MacroCollector(BaseCollector):
-    category = "宏观"
+class OilCollector(BaseCollector):
+    category = "原油"
 
     def collect(self) -> List[AssetRecord]:
         result: List[AssetRecord] = []
@@ -49,15 +45,13 @@ class MacroCollector(BaseCollector):
                     old = float(hist["Close"].iloc[0])
                     if old and old > 0:
                         change_7d = (price - old) / old * 100
-                # VIX 为点数，其余为收益率百分比
-                unit = "点" if symbol == "^VIX" else "%"
                 result.append(
                     AssetRecord(
                         category=self.category,
                         symbol=symbol,
                         name=name,
                         price=round(price, 2),
-                        unit=unit,
+                        unit="$",
                         currency="USD",
                         change_24h=change_24h,
                         change_7d=change_7d,

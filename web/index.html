@@ -130,10 +130,11 @@
     const refreshBtn = document.getElementById('refresh');
 
     function formatPrice(unit, price) {
-      if (unit === '%') return price.toFixed(2) + '%';
       const n = Number(price);
       if (isNaN(n)) return '-';
-      return unit + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      if (unit === '%') return n.toFixed(2) + '%';
+      if (unit === '点') return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' 点';
+      return (unit || '') + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     }
 
     function formatChange(v) {

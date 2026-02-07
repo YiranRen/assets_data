@@ -1,69 +1,117 @@
 {
-  "collected_at": "2026-02-06T09:40:00.267910",
-  "count": 29,
+  "collected_at": "2026-02-06T14:56:04.653217",
+  "count": 59,
   "records": [
     {
       "category": "美股",
       "symbol": "AAPL",
-      "name": "苹果公司",
-      "price": 275.91,
+      "name": "苹果",
+      "price": 279.85,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -0.209768,
-      "change_7d": 7.592418255042896,
+      "change_24h": 1.4280027,
+      "change_7d": 8.35140209177984,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "美股",
-      "symbol": "TSLA",
-      "name": "特斯拉",
-      "price": 397.21,
+      "symbol": "MSFT",
+      "name": "微软",
+      "price": 397.16,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -2.16744,
-      "change_7d": -7.938161621792948,
+      "change_24h": 0.8865268,
+      "change_7d": -8.382929642445209,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "美股",
+      "symbol": "GOOGL",
+      "name": "谷歌",
+      "price": 323.95,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -2.20377,
+      "change_7d": -4.227642276422768,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "美股",
+      "symbol": "AMZN",
+      "name": "亚马逊",
+      "price": 202.47,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -9.079887,
+      "change_7d": -16.24125943053842,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "美股",
       "symbol": "NVDA",
       "name": "英伟达",
-      "price": 171.88,
+      "price": 180.78,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -1.32806,
-      "change_7d": -10.254805677907463,
+      "change_24h": 5.2208843,
+      "change_7d": -6.093187284579871,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "美股",
-      "symbol": "SPY",
-      "name": "标普500ETF",
-      "price": 677.62,
+      "symbol": "META",
+      "name": "Meta",
+      "price": 657.4001,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -1.24893,
-      "change_7d": -2.559601873341032,
+      "change_24h": -1.9113317,
+      "change_7d": -10.958797500527226,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "美股",
+      "symbol": "TSLA",
+      "name": "特斯拉",
+      "price": 407.35,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 2.5528095,
+      "change_7d": -2.2109654341685174,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "美股",
+      "symbol": "VOO",
+      "name": "Vanguard标普500ETF",
+      "price": 629.88,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 1.0864887,
+      "change_7d": -1.3144937525675566,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "美股",
       "symbol": "QQQ",
       "name": "纳斯达克100ETF",
-      "price": 597.03,
+      "price": 602.98,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -1.43953,
-      "change_7d": -5.715228890039558,
+      "change_24h": 0.9965916,
+      "change_7d": -4.202213587461759,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股股票",
+      "category": "A股",
       "symbol": "000001",
       "name": "平安银行",
       "price": 11.05,
@@ -72,10 +120,10 @@
       "change_24h": -0.36,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股股票",
+      "category": "A股",
       "symbol": "600036",
       "name": "招商银行",
       "price": 39.6,
@@ -84,10 +132,10 @@
       "change_24h": -0.28,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股股票",
+      "category": "A股",
       "symbol": "600519",
       "name": "贵州茅台",
       "price": 1515.01,
@@ -96,10 +144,10 @@
       "change_24h": -2.57,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股股票",
+      "category": "A股",
       "symbol": "002594",
       "name": "比亚迪",
       "price": 89.82,
@@ -108,10 +156,10 @@
       "change_24h": -0.32,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股指数",
+      "category": "A股",
       "symbol": "000016",
       "name": "上证50",
       "price": 3.68,
@@ -120,22 +168,10 @@
       "change_24h": 3.08,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
-      "category": "A股指数",
-      "symbol": "000300",
-      "name": "沪深300",
-      "price": 4643.6,
-      "unit": "¥",
-      "currency": "CNY",
-      "change_24h": -0.57,
-      "change_7d": null,
-      "source": "akshare",
-      "collected_at": "2026-02-06T09:40:00.267910"
-    },
-    {
-      "category": "A股指数",
+      "category": "A股",
       "symbol": "399001",
       "name": "深证成指",
       "price": 13906.73,
@@ -144,7 +180,7 @@
       "change_24h": -0.33,
       "change_7d": null,
       "source": "tencent",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "日股",
@@ -156,7 +192,7 @@
       "change_24h": 2.118919,
       "change_7d": 16.416070988415086,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "日股",
@@ -168,7 +204,7 @@
       "change_24h": 1.0345501,
       "change_7d": 2.1108699940816726,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "日股",
@@ -180,7 +216,7 @@
       "change_24h": 3.3445377,
       "change_7d": -2.0859872611464967,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "日股",
@@ -192,103 +228,283 @@
       "change_24h": 1.6474059,
       "change_7d": 5.459183673469388,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "日股",
+      "symbol": "2768.T",
+      "name": "双日",
+      "price": 5929.0,
+      "unit": "¥",
+      "currency": "JPY",
+      "change_24h": 2.737827,
+      "change_7d": 5.142755807767334,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "日股",
       "symbol": "^N225",
-      "name": "日经225",
+      "name": "日经指数",
       "price": 54253.68,
       "unit": "¥",
       "currency": "JPY",
       "change_24h": 0.8094695,
       "change_7d": 1.645093285687501,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "欧股",
+      "symbol": "^GDAXI",
+      "name": "德国DAX",
+      "price": 24666.6,
+      "unit": "点",
+      "currency": "EUR",
+      "change_24h": 0.7167519,
+      "change_7d": 1.4691360841698984,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "欧股",
+      "symbol": "^FCHI",
+      "name": "法国CAC40",
+      "price": 8272.01,
+      "unit": "点",
+      "currency": "EUR",
+      "change_24h": 0.41079038,
+      "change_7d": 2.485952059101723,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "欧股",
+      "symbol": "^FTSE",
+      "name": "英国富时100",
+      "price": 10359.87,
+      "unit": "点",
+      "currency": "EUR",
+      "change_24h": 0.49131256,
+      "change_7d": 1.848937247327969,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "港股",
+      "symbol": "^HSI",
+      "name": "恒生指数",
+      "price": 26559.95,
+      "unit": "点",
+      "currency": "HKD",
+      "change_24h": -1.2099241,
+      "change_7d": -5.034808782497797,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "港股",
+      "symbol": "0700.HK",
+      "name": "腾讯控股",
+      "price": 547.5,
+      "unit": "HK$",
+      "currency": "HKD",
+      "change_24h": -1.9695613,
+      "change_7d": -11.97749196141479,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "港股",
+      "symbol": "9988.HK",
+      "name": "阿里巴巴",
+      "price": 155.0,
+      "unit": "HK$",
+      "currency": "HKD",
+      "change_24h": -2.8822093,
+      "change_7d": -10.559724598673164,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "港股",
+      "symbol": "3690.HK",
+      "name": "美团",
+      "price": 91.4,
+      "unit": "HK$",
+      "currency": "HKD",
+      "change_24h": -2.558637,
+      "change_7d": -7.302229802783238,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "港股",
+      "symbol": "1810.HK",
+      "name": "小米集团",
+      "price": 35.18,
+      "unit": "HK$",
+      "currency": "HKD",
+      "change_24h": 0.7445651,
+      "change_7d": -3.932274641960651,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "台股",
+      "symbol": "2330.TW",
+      "name": "台积电",
+      "price": 1780.0,
+      "unit": "NT$",
+      "currency": "TWD",
+      "change_24h": 0.8498584,
+      "change_7d": -1.3850415512465373,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "台股",
+      "symbol": "2317.TW",
+      "name": "鸿海",
+      "price": 215.0,
+      "unit": "NT$",
+      "currency": "TWD",
+      "change_24h": -0.23201856,
+      "change_7d": -4.017857142857143,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "台股",
+      "symbol": "2454.TW",
+      "name": "联发科",
+      "price": 1710.0,
+      "unit": "NT$",
+      "currency": "TWD",
+      "change_24h": -3.3898306,
+      "change_7d": -3.932584269662921,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "贵金属",
       "symbol": "黄金",
       "name": "黄金",
-      "price": 4887.2,
+      "price": 4953.5,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -0.047039574598633435,
-      "change_7d": 3.6763635470936715,
+      "change_24h": 1.3089272931792617,
+      "change_7d": 5.082842288125823,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "贵金属",
       "symbol": "白银",
       "name": "白银",
-      "price": 74.04,
+      "price": 75.36,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -3.48567406210078,
-      "change_7d": -5.428536040142554,
+      "change_24h": -1.758479547409865,
+      "change_7d": -3.7361104627950392,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "贵金属",
       "symbol": "铂金",
       "name": "铂金",
-      "price": 181.77,
+      "price": 188.13,
       "unit": "$",
       "currency": "USD",
-      "change_24h": -9.751253661685114,
-      "change_7d": -25.8565845632293,
+      "change_24h": 3.590991685479862,
+      "change_7d": -21.326644018513974,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "贵金属",
+      "symbol": "铜",
+      "name": "铜",
+      "price": 5.84,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 0.36935234495791996,
+      "change_7d": -0.924195989214759,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "原油",
+      "symbol": "CL=F",
+      "name": "WTI原油",
+      "price": 63.22,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -0.11060199083583548,
+      "change_7d": -3.0516778291850977,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "原油",
+      "symbol": "BZ=F",
+      "name": "布伦特原油",
+      "price": 67.55,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 0.0,
+      "change_7d": -4.441932851832829,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "外汇",
       "symbol": "USDCNY=X",
       "name": "美元",
-      "price": 6.9382,
+      "price": 6.9383,
       "unit": "¥",
       "currency": "CNY",
-      "change_24h": 0.01297334697938055,
-      "change_7d": -0.23438346249657996,
+      "change_24h": 0.014414829977085234,
+      "change_7d": -0.23294554464270903,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "外汇",
       "symbol": "EURCNY=X",
       "name": "欧元",
-      "price": 8.1843,
+      "price": 8.2036,
       "unit": "¥",
       "currency": "CNY",
-      "change_24h": 0.15296507501408585,
-      "change_7d": -1.7460278245756804,
+      "change_24h": 0.38914315083580725,
+      "change_7d": -1.514327903631234,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "外汇",
       "symbol": "GBPCNY=X",
       "name": "英镑",
-      "price": 9.4208,
+      "price": 9.4398,
       "unit": "¥",
       "currency": "CNY",
-      "change_24h": 0.3557960670686273,
-      "change_7d": -2.0186699988276087,
+      "change_24h": 0.5581950273771273,
+      "change_7d": -1.821059894587811,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "外汇",
       "symbol": "JPYCNY=X",
       "name": "日元",
-      "price": 0.0441,
+      "price": 0.0442,
       "unit": "¥",
       "currency": "CNY",
-      "change_24h": 0.02266032177656044,
-      "change_7d": -2.8309776608053743,
+      "change_24h": 0.1359619306594098,
+      "change_7d": -2.7209085371769226,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "外汇",
@@ -300,7 +516,31 @@
       "change_24h": 0.03381043615462267,
       "change_7d": -0.4240629119267191,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "外汇",
+      "symbol": "SGDCNY=X",
+      "name": "新加坡元",
+      "price": 5.4588,
+      "unit": "¥",
+      "currency": "CNY",
+      "change_24h": 0.3455882352941122,
+      "change_7d": -0.9888601648050348,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "宏观",
+      "symbol": "^VIX",
+      "name": "VIX波动率",
+      "price": 19.23,
+      "unit": "点",
+      "currency": "USD",
+      "change_24h": -11.667432246210376,
+      "change_7d": 13.92180661178821,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "宏观",
@@ -309,10 +549,10 @@
       "price": 3.58,
       "unit": "%",
       "currency": "USD",
-      "change_24h": -0.47288456189151656,
-      "change_7d": -0.11167552057418054,
+      "change_24h": 0.05590274208511404,
+      "change_7d": 2.1311158382532576e-06,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "宏观",
@@ -321,10 +561,10 @@
       "price": 3.75,
       "unit": "%",
       "currency": "USD",
-      "change_24h": -2.1654107923083297,
-      "change_7d": -2.3945863468688726,
+      "change_24h": 0.0,
+      "change_7d": -1.4454682205584233,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "宏观",
@@ -333,10 +573,10 @@
       "price": 4.21,
       "unit": "%",
       "currency": "USD",
-      "change_24h": -1.520467836257319,
-      "change_7d": -0.9644772575816949,
+      "change_24h": -0.04750593824227505,
+      "change_7d": -0.4494969351341271,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
     },
     {
       "category": "宏观",
@@ -345,10 +585,130 @@
       "price": 4.86,
       "unit": "%",
       "currency": "USD",
-      "change_24h": -1.0783316378433354,
-      "change_7d": 0.041149515034059114,
+      "change_24h": -0.020567667626498025,
+      "change_7d": 0.1442090711833136,
       "source": "yfinance",
-      "collected_at": "2026-02-06T09:40:00.267910"
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "全球ETF",
+      "symbol": "VT",
+      "name": "全球股票",
+      "price": 145.2801,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 1.3464245,
+      "change_7d": -0.9813939536008818,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "全球ETF",
+      "symbol": "EFA",
+      "name": "发达市场",
+      "price": 101.97,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 1.6548736,
+      "change_7d": 0.27534423431161126,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "全球ETF",
+      "symbol": "EEM",
+      "name": "新兴市场",
+      "price": 59.5199,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 1.743418,
+      "change_7d": -1.5223339636251823,
+      "source": "yfinance",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "BTC",
+      "name": "比特币",
+      "price": 68011.8,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -2.3475593997139854,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "ETH",
+      "name": "以太坊",
+      "price": 1973.61,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -4.054428515174938,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "SOL",
+      "name": "Solana",
+      "price": 83.83,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -5.946370470099854,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "XRP",
+      "name": "瑞波币",
+      "price": 1.4605,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 7.051235065601407,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "BNB",
+      "name": "币安币",
+      "price": 647.4,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -4.442804428044281,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "OKB",
+      "name": "OKB",
+      "price": 72.87,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": -5.055374592833876,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
+    },
+    {
+      "category": "加密货币",
+      "symbol": "HYPE",
+      "name": "HYPE",
+      "price": 33.337,
+      "unit": "$",
+      "currency": "USD",
+      "change_24h": 4.223722878759458,
+      "change_7d": null,
+      "source": "okx",
+      "collected_at": "2026-02-06T14:56:04.653217"
     }
   ]
 }

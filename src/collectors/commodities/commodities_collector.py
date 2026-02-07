@@ -90,4 +90,9 @@ class CommoditiesCollector(BaseCollector):
         if r3:
             r3.symbol = "铂金"
             result.append(r3)
+        # 铜：yfinance 期货，归入贵金属
+        r4 = _yf_metal("HG=F", "铜")
+        if r4:
+            r4.symbol = "铜"
+            result.append(r4)
         return result

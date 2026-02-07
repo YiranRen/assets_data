@@ -25,7 +25,7 @@
 
 - **HTTP API**：通过 REST 请求拉取最新价、涨跌幅等，多数为免费、有频率限制。
 - **交易所 API**：通过 CCXT 或直连交易所获取 Crypto/贵金属永续等实时行情。
-- **多数据源**：A股、贵金属等支持主/备源自动切换，提高可用性。11
+- **多数据源**：A股、贵金属等支持主/备源自动切换，提高可用性。
 
 ---
 
@@ -70,7 +70,19 @@ python collect_unified.py
 python test_all_sources.py
 ```
 
-### 3. 数据展示示例
+### 3. 启动 Web 看板
+
+在项目根目录执行（需先执行一次采集以有数据）：
+
+```bash
+python3 -m uvicorn web.main:app --host 0.0.0.0 --port 8765
+```
+
+或：`chmod +x run_web.sh && ./run_web.sh`
+
+浏览器访问：**http://127.0.0.1:8765** 或 **http://localhost:8765**。若本机访问不通，检查是否在项目根目录启动、8765 端口是否被占用（`lsof -i :8765`）。
+
+### 4. 数据展示示例
 
 运行 `collect_unified.py` 后可以看到统一格式的数据：
 

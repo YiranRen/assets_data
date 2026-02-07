@@ -15,6 +15,7 @@ PAIRS = [
     ("GBPCNY=X", "英镑", "GBP"),
     ("JPYCNY=X", "日元", "JPY"),
     ("HKDCNY=X", "港币", "HKD"),
+    ("SGDCNY=X", "新加坡元", "SGD"),
 ]
 
 

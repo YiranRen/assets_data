@@ -85,6 +85,8 @@ def main() -> None:
             ch7 = f"[green]{ch7}[/green]" if r.change_7d >= 0 else f"[red]{ch7}[/red]"
         if r.unit == "%":
             price_str = f"{r.price:,.2f}%"
+        elif r.unit == "点":
+            price_str = f"{r.price:,.2f} 点"
         elif r.unit:
             price_str = f"{r.unit}{r.price:,.2f}"
         else:
